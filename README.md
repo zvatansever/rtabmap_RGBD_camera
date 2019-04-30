@@ -11,7 +11,7 @@ rtabmap-databasedViewer is a great tool to detect loop closures (using SURF) and
 If you don't have a catkin workspace defined, do the following
 
 create a folder somewhere convenient
-'''sh
+```sh
 mkdir -p catkin_ws
 cd catkin_ws
 mkdir src
@@ -19,26 +19,25 @@ cd src
 catkin_init_workspace
 cd ..
 catkin_make
-'''
+```
 Once you have catkin_ws 
 
-'''sh
+```sh
 cd catkin_ws/src
 git clone https://github.com/zvatansever/rtabmap_RGBD_camera
 cd ..
 catkin_make
 source devel/setup.bash
 roslaunch rtabmap_RGBD_camera mapping.launch
-'''
+```
 Open a new terminal
-'''sh
+```sh
 rosrun teleop_twist_keyboard teleop_twist_keyboard
-'''
+```
 Drive the robot around the room at least two times to detect the loop closures.
 Once you are done, a new file will appear named mymap.db
 You can access it using
-'''sh
+```sh
 cd catkin_ws/src/rtabmap_RGBD_camera
 rtabmap-databaseViewer mymap.db
-'''
-
+```
